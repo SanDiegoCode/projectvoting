@@ -27,9 +27,9 @@ export default class Submission extends React.Component {
   render() {
     return (
       <div className="submission">
-        {this.props.data.name} submitted <a target="_blank" href={this.props.data.url}>{this.props.data.url}</a>
+        <div className="submission-text">{this.props.data.name} submitted <a target="_blank" className="submission-link" href={this.props.data.url}>{this.props.data.url}</a></div>
         <input id={this.props.data.key} className="submission-upvote-button" type="button" value="Up Vote"/>
-        {(this.props.data.votes) ? Object.keys(this.props.data.votes).length : 0}
+        <div className="submission-votes">{(this.props.data.votes) ? Object.keys(this.props.data.votes).length : 0}</div>
       </div>
     );
   }

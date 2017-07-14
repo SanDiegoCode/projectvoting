@@ -96,7 +96,7 @@ export default class SubmissionList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="submission-list-view">
         {this.state.renderList}
       </div>
     );

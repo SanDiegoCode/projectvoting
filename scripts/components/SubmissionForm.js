@@ -30,24 +30,24 @@ export default class SubmissionForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="submission-form-view">
         <form action="/" id="submission-form">
-          <label for="name">
+          <label className="submission-label" for="name">
             Name
           </label>
           <input className="standard-input" type="text" name="name" id="name" required/>
 
-          <label for="age">
+          <label className="submission-label" for="age">
             Age
           </label>
           <input className="standard-input" type="number" name="age" id="age" required/>
 
-          <label for="gender">
+          <label className="submission-label" for="gender">
             Gender
           </label>
           <input className="standard-input" type="text" name="gender" id="gender" required/>
 
-          <label for="penurl">
+          <label className="submission-label" for="penurl">
             URL
           </label>
           <input className="standard-input" type="url" name="url" id="url" required/>
