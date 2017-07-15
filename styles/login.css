@@ -1,0 +1,29 @@
+.login-view {
+  position: fixed;
+  width: 40vw;
+  height: 80vh;
+  top: 10vh;
+  left: 30vw;
+  background-color: white;
+  padding: 1%;
+  box-shadow: 0px 0px 20px #404040;
+  z-index: 1000001;
+}
+
+.login-view-form {
+
+}
+
+.create-account-form {
+
+}
+
+.backdrop-item {
+  position: fixed;
+  left: 0vw;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.4);
+}

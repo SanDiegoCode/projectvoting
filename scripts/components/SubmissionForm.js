@@ -16,13 +16,14 @@ export default class SubmissionForm extends React.Component {
         age: document.getElementById("age").value,
         gender: document.getElementById("gender").value,
         url: document.getElementById("url").value,
-
+        email: firebase.auth().currentUser.email,
       };
       firebase.database().ref("submissions").push().set({
         name: data.name,
         age: data.age,
         gender: data.gender,
         url: data.url,
+        email: data.email,
       });
       console.log(data);
     });

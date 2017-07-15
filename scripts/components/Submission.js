@@ -16,8 +16,13 @@ export default class Submission extends React.Component {
         return;
       }
       firebase.database().ref("submissions/" + ref + "/votes").push().set({
-        val: true,
+        email: firebase.auth().currentUser.email,
+        uid: firebase.auth().currentUser.uid,
       });
+      firebase.database().ref("emails/" + firebase.auth().currentUser.uid).push().set({
+        vote: true,
+        ref,
+      })
       var votes = localStorage.getItem("votes") + "1";
       localStorage.setItem("votes", votes);
       console.log(localStorage.getItem("votes"));
