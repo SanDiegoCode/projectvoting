@@ -10,6 +10,10 @@ export default class SubmissionForm extends React.Component {
     var form = document.getElementById("submission-form");
 
     form.addEventListener("submit", function(e) {
+      if(localStorage.getItem("submitted")) {
+        alert("Sorry bud, you can only submit once!");
+        return;
+      }
       e.preventDefault();
       var data = {
         name: document.getElementById("name").value,
@@ -26,6 +30,7 @@ export default class SubmissionForm extends React.Component {
         email: data.email,
       });
       console.log(data);
+      localStorage.setItem("submitted", "true");
     });
   }
 
